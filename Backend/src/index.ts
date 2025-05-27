@@ -6,7 +6,11 @@ import chatRoutes from './routes/chat';
 import { config } from './config/environment';
 
 const app = express();
-app.use(cors());
+
+app.use(cors({
+  origin:"https://no-code-iota.vercel.app"
+}));
+
 app.use(express.json());
 
 // Setup routes
